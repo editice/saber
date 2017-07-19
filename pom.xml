@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.editice.saber</groupId>
+    <artifactId>saber</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>saber-common</module>
+        <module>saber-boot</module>
+    </modules>
+    <name>saber</name>
+    <description>project for tools set and try new things</description>
+    <url>https://github.com/editice/saber</url>
+    <inceptionYear>2017</inceptionYear>
+
+    <developers>
+        <developer>
+            <name>zhang jian</name>
+            <email>editice@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <saber.version>1.0.0-SNAPSHOT</saber.version>
+    </properties>
+
+    <dependencies>
+        <!--common usage-->
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--saber self module-->
+            <dependency>
+                <groupId>org.editice.saber</groupId>
+                <artifactId>saber-common</artifactId>
+                <version>${saber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.editice.saber</groupId>
+                <artifactId>saber-boot</artifactId>
+                <version>${saber.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
