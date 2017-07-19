@@ -9,16 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>saber-boot</artifactId>
+    <artifactId>saber-facade</artifactId>
     <version>${saber.version}</version>
     <packaging>jar</packaging>
-    <name>saber-boot</name>
+    <name>saber-facade</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.editice.saber</groupId>
-            <artifactId>saber-facade</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.editice.saber</groupId>
             <artifactId>saber-common</artifactId>
@@ -29,21 +25,5 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

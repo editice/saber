@@ -10,6 +10,7 @@
     <modules>
         <module>saber-common</module>
         <module>saber-boot</module>
+        <module>saber-facade</module>
     </modules>
     <name>saber</name>
     <description>project for tools set and try new things</description>
@@ -25,6 +26,7 @@
 
     <properties>
         <saber.version>1.0.0-SNAPSHOT</saber.version>
+        <maven-antrun.version>1.8</maven-antrun.version>
     </properties>
 
     <dependencies>
@@ -36,6 +38,11 @@
             <!--saber self module-->
             <dependency>
                 <groupId>org.editice.saber</groupId>
+                <artifactId>saber-facade</artifactId>
+                <version>${saber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.editice.saber</groupId>
                 <artifactId>saber-common</artifactId>
                 <version>${saber.version}</version>
             </dependency>
@@ -44,8 +51,29 @@
                 <artifactId>saber-boot</artifactId>
                 <version>${saber.version}</version>
             </dependency>
+
+            <!--spring boot bom-->
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.0.0.M2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
 </project>
