@@ -14,7 +14,7 @@ public class TestController {
 
     @RequestMapping("/")
     public ModelAndView print(){
-        String url = "//www.baidu.com";
+        String url = "http://m.tb.cn/q1.X51ao";
         return new ModelAndView(new RedirectView(url));
     }
 }
