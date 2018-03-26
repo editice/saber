@@ -3,8 +3,10 @@ package org.editice.saber.facade.test;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import com.google.common.collect.Lists;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
@@ -14,6 +16,19 @@ import java.util.concurrent.atomic.AtomicLong;
  * @date 2017/10/31.
  */
 public class JunitTest {
+
+    @Test
+    public void testNullForeach(){
+        List<String> list = Lists.newArrayList();
+
+        list.add("11");
+        list.add("22");
+        list.add(null);
+        list.add("33");
+        for(String s: list){
+            System.out.println(s);
+        }
+    }
 
     /**
      * 测试使用guava的cache存储计数器来测试限流

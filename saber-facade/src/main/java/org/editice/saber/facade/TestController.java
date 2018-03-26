@@ -2,6 +2,8 @@ package org.editice.saber.facade;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 /**
  * @author tinglang
@@ -11,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping("/")
-    public String print(){
-        return "hello world";
+    public ModelAndView print(){
+        String url = "//www.baidu.com";
+        return new ModelAndView(new RedirectView(url));
     }
 }
