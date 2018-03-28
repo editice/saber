@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.HashMap;
+
 /**
  * @author tinglang
  * @date 17/7/19.
@@ -19,8 +21,7 @@ public class TestController {
     }
 
     @RequestMapping("/h5demo/")
-    public String test2(){
-        String url = "http://m.tb.cn/q1.X51ao";
+    public String helloHtml(HashMap<String,Object> map){
         return "/h5demo";
     }
 }
