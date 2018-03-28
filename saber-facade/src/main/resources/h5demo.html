@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta name="data-spm" content="paiyangji" />
+    <meta name="aplus-waiting" content="MAN">
+  </head>
+<body data-spm="11335201">
+<script type="text/javascript" src="https://g.alicdn.com/alilog/mlog/aplus_wap.js"></script>
+<button type="button1" onclick="sendGoodsListEvent()">goods_list</button>
+
+<button type="button2" onclick="sendGoodsClickEvent()">goods_click</button>
+
+<button type="button3" onclick="sendQrCodeEvent()">qr_code</button>
+
+<button type="button4" onclick="sendPaySuccessEvent()">pay_success</button>
+</body>
+</html>
+<script>
+
+    //自定义事件埋点1  -- view goods_list
+    //商品陈列页曝光，会话识别号，设备序列号，当前页面位置
+function sendGoodsListEvent()
+{
+    var q = (window.goldlog_queue || (window.goldlog_queue = []));
+    q.push({
+        action: 'goldlog.setPageSPM',
+        arguments: [null, 11335201]
+    });
+    q.push({
+        action: 'goldlog.sendPV',
+        arguments: [{
+            is_auto: false,
+            checksum: '46956129' // checksum 根据"spmA.spmB"去申请地址申请
+        }, {
+          session_id: 1,
+          sn: 2,
+          page: 1
+        }]
+    });
+}
+
+    //自定义事件埋点2  -- goods_click
+    //商品陈列页曝光，会话识别号，设备序列号，商品的SKU信息，当前页面位置
+function sendGoodsClickEvent()
+{
+    var q = (window.goldlog_queue || (window.goldlog_queue = []));
+    // 发黄金令箭 需要配置参数session_id sn item_id
+    q.push({
+      action: "goldlog.record",
+      arguments: ["/paiyangji.paiyangjigoodsclick.goods_click", "CLK", "session_id=1&sn=2&item_id=3&page=1", "GET"]
+    });
+}
+
+    //自定义事件埋点3  -- qr_code
+    //交易二维码曝光，会话识别号，设备序列号，商品的SKU信息
+function sendQrCodeEvent()
+{
+    var q = (window.goldlog_queue || (window.goldlog_queue = []));
+    q.push({
+        action: 'goldlog.setPageSPM',
+        arguments: [null, 11335202]
+    });
+    q.push({
+        action: 'goldlog.sendPV',
+        arguments: [{
+            is_auto: false,
+            checksum: '46956151' // checksum 根据"spmA.spmB"去申请地址申请
+        }, {
+          session_id: 1,
+          sn: 2,
+          item_id: 3
+        }]
+    });
+}
+
+    //自定义事件埋点4  -- pay_success
+    //支付完成页面曝光，会话识别号，设备序列号，友朋交易单号
+function sendPaySuccessEvent()
+{
+    var q = (window.goldlog_queue || (window.goldlog_queue = []));
+    q.push({
+        action: 'goldlog.setPageSPM',
+        arguments: [null, 11335203]
+    });
+    q.push({
+        action: 'goldlog.sendPV',
+        arguments: [{
+            is_auto: false,
+            checksum: '46956152' // checksum 根据"spmA.spmB"去申请地址申请
+        }, {
+          session_id: 1,
+          sn: 2,
+          order_id: 3
+        }]
+    });
+}
+</script>

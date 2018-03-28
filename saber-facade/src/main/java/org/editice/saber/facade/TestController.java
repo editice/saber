@@ -12,9 +12,15 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 public class TestController {
 
-    @RequestMapping("/")
+    @RequestMapping("/test1/")
     public ModelAndView print(){
         String url = "http://m.tb.cn/q1.X51ao";
         return new ModelAndView(new RedirectView(url));
+    }
+
+    @RequestMapping("/h5demo/")
+    public String test2(){
+        String url = "http://m.tb.cn/q1.X51ao";
+        return "/h5demo";
     }
 }
