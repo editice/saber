@@ -14,10 +14,9 @@ import java.util.HashMap;
 @RestController
 public class TestController {
 
-    @RequestMapping("/test1/")
-    public ModelAndView print(){
-        String url = "http://m.tb.cn/q1.X51ao";
-        return new ModelAndView(new RedirectView(url));
+    @RequestMapping("/")
+    public String print(){
+        return "HELLO WORLD!";
     }
 
     @RequestMapping("/h5demo/")
