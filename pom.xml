@@ -11,8 +11,6 @@
         <module>saber-common</module>
         <module>saber-boot</module>
         <module>saber-facade</module>
-        <module>saber-tool</module>
-        <module>saber-tool-core</module>
     </modules>
     <name>saber</name>
     <description>project for tools set and try new things</description>
