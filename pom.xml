@@ -11,6 +11,8 @@
         <module>saber-common</module>
         <module>saber-boot</module>
         <module>saber-facade</module>
+        <module>saber-tool</module>
+        <module>saber-tool-core</module>
     </modules>
     <name>saber</name>
     <description>project for tools set and try new things</description>
@@ -27,6 +29,7 @@
     <properties>
         <saber.version>1.0.0-SNAPSHOT</saber.version>
         <maven-antrun.version>1.8</maven-antrun.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -73,6 +76,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>21.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.jopt-simple</groupId>
+                <artifactId>jopt-simple</artifactId>
+                <version>4.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
