@@ -10,3 +10,6 @@ SABER is a spring-boot project for tools set And try new things!
 ## Features
 
 ## ChangeLog
+
+### 2018-11-30
+- test git rebase usage
