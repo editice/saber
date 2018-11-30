@@ -16,7 +16,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String print(){
-        return "HELLO WORLD!";
+        return "HELLO WORLD! YES!";
     }
 
     @RequestMapping("/h5demo/")
