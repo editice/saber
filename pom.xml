@@ -11,6 +11,7 @@
         <module>saber-common</module>
         <module>saber-boot</module>
         <module>saber-facade</module>
+        <module>saber-tool</module>
     </modules>
     <name>saber</name>
     <description>project for tools set and try new things</description>
@@ -45,6 +46,11 @@
             <dependency>
                 <groupId>org.editice.saber</groupId>
                 <artifactId>saber-common</artifactId>
+                <version>${saber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.editice.saber</groupId>
+                <artifactId>saber-tool</artifactId>
                 <version>${saber.version}</version>
             </dependency>
             <dependency>
