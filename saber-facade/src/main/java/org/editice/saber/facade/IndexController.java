@@ -19,8 +19,4 @@ public class IndexController {
         return "HELLO WORLD! YES!";
     }
 
-    @RequestMapping("/h5demo/")
-    public String helloHtml(HashMap<String,Object> map){
-        return "/h5demo";
-    }
 }

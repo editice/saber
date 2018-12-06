@@ -1,6 +1,6 @@
 package org.editice.saber.facade.preload;
 
-import org.editice.saber.facade.conf.SaberConf;
+import org.editice.saber.facade.conf.SaberSysConf;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +14,12 @@ import javax.annotation.Resource;
 public class PreloadManager implements CommandLineRunner {
 
     @Resource
-    private SaberConf saberConf;
+    private SaberSysConf saberSysConf;
 
     public void run(String... strings) throws Exception {
         System.out.println("saber conf - preload ...");
-        printConf("appEnv", saberConf.getAppEnv());
-        printConf("appDesc", saberConf.getAppDesc());
+        printConf("appEnv", saberSysConf.getAppEnv());
+        printConf("appDesc", saberSysConf.getAppDesc());
     }
 
     private void printConf(String key, Object val) {

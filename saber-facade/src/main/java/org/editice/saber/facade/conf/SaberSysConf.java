@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @date 2018/12/6.
  */
 @Component
-public class SaberConf {
+public class SaberSysConf {
 
     @Value("${appEnv}")
     @Getter
