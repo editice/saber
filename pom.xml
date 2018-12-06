@@ -26,6 +26,9 @@
     </developers>
 
     <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <version.java>1.8</version.java>
         <saber.version>1.0.0-SNAPSHOT</saber.version>
         <maven-antrun.version>1.8</maven-antrun.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
