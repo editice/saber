@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @date 17/7/19.
  */
 @RestController
-public class TestController {
+public class IndexController {
 
     @RequestMapping("/")
     public String print(){
