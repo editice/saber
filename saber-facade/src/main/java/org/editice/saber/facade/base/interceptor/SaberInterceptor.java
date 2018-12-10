@@ -1,4 +1,4 @@
-package org.editice.saber.facade.interceptor;
+package org.editice.saber.facade.base.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

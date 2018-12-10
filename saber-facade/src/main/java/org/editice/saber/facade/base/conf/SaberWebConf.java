@@ -1,6 +1,6 @@
-package org.editice.saber.facade.conf;
+package org.editice.saber.facade.base.conf;
 
-import org.editice.saber.facade.interceptor.SaberInterceptor;
+import org.editice.saber.facade.base.interceptor.SaberInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

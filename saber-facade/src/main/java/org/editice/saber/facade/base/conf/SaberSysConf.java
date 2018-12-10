@@ -1,4 +1,4 @@
-package org.editice.saber.facade.conf;
+package org.editice.saber.facade.base.conf;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,4 +19,11 @@ public class SaberSysConf {
     @Getter
     private String appDesc;
 
+    @Override
+    public String toString() {
+        return "SaberSysConf{" +
+                "appEnv='" + appEnv + '\'' +
+                ", appDesc='" + appDesc + '\'' +
+                '}';
+    }
 }
