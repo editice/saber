@@ -11,6 +11,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args){
-        SpringApplication.run(Application.class, args);
+        SpringApplication springApplication = new SpringApplication(Application.class);
+
+        //add initializers
+        springApplication.addInitializers(new SaberApplicationContextInitializer());
+
+        //add listeners
+        springApplication.addListeners(new SaberApplicationDemoListener());
+
+        //run application
+        springApplication.run(args);
     }
 }
