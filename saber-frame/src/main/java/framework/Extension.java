@@ -15,5 +15,5 @@ public @interface Extension {
 
     String productCode() default "";
 
-    int priority() default 0;
+    String[] supportActions() default "";//不指定默认支持所有action
 }

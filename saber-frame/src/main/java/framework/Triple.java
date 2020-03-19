@@ -7,20 +7,23 @@ import lombok.Data;
  * @date 2020/3/19.
  */
 @Data
-public class Pair<T> implements Comparable<Pair> {
+public class Triple<T, V> implements Comparable<Triple> {
 
 
-    T data;
+    T t;
+
+    V v;
 
     Integer priority;
 
-    public Pair(T data, int priority) {
-        this.data = data;
+    public Triple(T t, V v, int priority) {
+        this.t = t;
+        this.v = v;
         this.priority = priority;
     }
 
     @Override
-    public int compareTo(Pair o) {
+    public int compareTo(Triple o) {
         return o.getPriority().compareTo(priority);
     }
 

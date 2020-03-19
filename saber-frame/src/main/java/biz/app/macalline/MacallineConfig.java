@@ -34,7 +34,7 @@ public class MacallineConfig implements BizConfig {
         bizConfigSpec.addProductPriorityConfig("jumiaodai", CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_CHECK_TEST_ORDER, 3);
 
         bizConfigSpec.addProductPriorityConfig("intraPurchase", CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_ENRICH_ATTRIBUTE, 2);
-        bizConfigSpec.addProductPriorityConfig("jumiaodai", CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_ENRICH_ATTRIBUTE, 1);
+        bizConfigSpec.addProductPriorityConfig("jumiaodai", CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_ENRICH_ATTRIBUTE, -1);
 
         return bizConfigSpec;
     }
