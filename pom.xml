@@ -12,6 +12,7 @@
         <module>saber-boot</module>
         <module>saber-facade</module>
         <module>saber-tool</module>
+        <module>saber-frame</module>
     </modules>
     <name>saber</name>
     <description>project for tools set and try new things</description>
@@ -104,6 +105,12 @@
                 <groupId>net.sf.jopt-simple</groupId>
                 <artifactId>jopt-simple</artifactId>
                 <version>4.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.8</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
