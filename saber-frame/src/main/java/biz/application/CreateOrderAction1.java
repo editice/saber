@@ -4,10 +4,12 @@ import biz.sdk.CreateOrderReq;
 import biz.sdk.CreateTradeActionExt;
 import framework.Action;
 import framework.ActionSessionScope;
-import framework.ExtensionInvoker;
 
 import java.util.List;
 import java.util.Map;
+
+import static framework.ExtensionInvoker.execAll;
+import static framework.ExtensionInvoker.execFirst;
 
 /**
  * 提交订单的业务活动测试入口
@@ -19,10 +21,7 @@ public class CreateOrderAction1 implements Action {
 
     public void doCreate(String bizCode, long buyerId, long outOrderId) throws Exception {
         //构建请求入参
-        CreateOrderReq createOrderReq = new CreateOrderReq();
-        createOrderReq.setBuyerId(buyerId);
-        createOrderReq.setBizCode(bizCode);
-        createOrderReq.setOutOrderId(outOrderId);
+        CreateOrderReq req = build(bizCode, buyerId, outOrderId);
 
         new ActionSessionScope<Void, Exception>(getCode()) {
             @Override
@@ -30,16 +29,16 @@ public class CreateOrderAction1 implements Action {
                 System.out.println(String.format("-----------> 业务身份：{%s} <---------- ", bizCode));
 
                 //1.判断是否是测试订单，打印仲裁结果
-                Boolean isTestOrder = ExtensionInvoker.executeFirstMatchedExtension(createOrderReq,
+                Boolean isTestOrder = execFirst(req,
                         CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_CHECK_TEST_ORDER,
-                        ext -> ((CreateTradeActionExt) ext).isTestOrder(createOrderReq.getBuyerId()));
+                        ext -> ((CreateTradeActionExt) ext).isTestOrder(req.getBuyerId()));
                 System.out.println("执行结果（判断是否测试单）： " + isTestOrder);
                 System.out.println();
 
                 //2.获取订单打标结果，打印merge结果
-                List<Map<String, String>> allAttr = ExtensionInvoker.executeAllMatchedExtension(createOrderReq,
+                List<Map<String, String>> allAttr = execAll(req,
                         CreateTradeActionExt.STORE_TRADE_CREATE_TRADE_ENRICH_ATTRIBUTE,
-                        ext -> ((CreateTradeActionExt) ext).enrichAttributes(createOrderReq.getBuyerId()));
+                        ext -> ((CreateTradeActionExt) ext).enrichAttributes(req.getBuyerId()));
                 System.out.println("执行结果（订单打标）：" + allAttr);
                 System.out.println();
 
@@ -47,6 +46,14 @@ public class CreateOrderAction1 implements Action {
                 return null;
             }
         }.invoke();
+    }
+
+    private CreateOrderReq build(String bizCode, long buyerId, long outOrderId) {
+        CreateOrderReq req = new CreateOrderReq();
+        req.setBuyerId(buyerId);
+        req.setBizCode(bizCode);
+        req.setOutOrderId(outOrderId);
+        return req;
     }
 
 

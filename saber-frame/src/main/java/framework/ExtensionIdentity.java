@@ -11,8 +11,6 @@ import java.lang.annotation.*;
 @Inherited
 public @interface ExtensionIdentity {
 
-    String name() default "";
-
     String code();
 
     String desc() default "";

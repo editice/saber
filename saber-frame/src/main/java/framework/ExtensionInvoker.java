@@ -9,16 +9,16 @@ import java.util.List;
  */
 public class ExtensionInvoker {
 
-    public static <Extension extends IExt, OUT> OUT executeFirstMatchedExtension(IBizInstance iBizInstance,
-                                                                                 String extensionCode,
-                                                                                 ExtensionCallBack<Extension, OUT> extensionCallBack) {
+    public static <Extension extends IExt, OUT> OUT execFirst(IBizInstance iBizInstance,
+                                                              String extensionCode,
+                                                              ExtensionCallBack<Extension, OUT> extensionCallBack) {
         return extensionCallBack.apply((Extension) loadExtensions(iBizInstance, extensionCode).get(0));
 
     }
 
-    public static <Extension extends IExt, OUT> List<OUT> executeAllMatchedExtension(IBizInstance iBizInstance,
-                                                                                     String extensionCode,
-                                                                                     ExtensionCallBack<Extension, OUT> extensionCallBack) {
+    public static <Extension extends IExt, OUT> List<OUT> execAll(IBizInstance iBizInstance,
+                                                                  String extensionCode,
+                                                                  ExtensionCallBack<Extension, OUT> extensionCallBack) {
         List<OUT> results = new ArrayList<>();
         for (Object iExt : loadExtensions(iBizInstance, extensionCode)) {
             results.add(extensionCallBack.apply((Extension) iExt));
