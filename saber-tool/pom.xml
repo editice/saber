@@ -14,5 +14,18 @@
     <packaging>jar</packaging>
     <name>saber-tool</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>openapi</artifactId>
+            <version>7.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

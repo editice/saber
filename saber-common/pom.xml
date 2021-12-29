@@ -12,7 +12,7 @@
     <artifactId>saber-common</artifactId>
     <version>${saber.version}</version>
     <packaging>jar</packaging>
-    <name>saber-boot</name>
+    <name>saber-common</name>
 
 
 </project>
