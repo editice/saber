@@ -27,9 +27,7 @@
     </developers>
 
     <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <version.java>1.8</version.java>
+        <java.version>1.8</java.version>
         <saber.version>1.0.0-SNAPSHOT</saber.version>
         <saber.tool.version>1.0.0-SNAPSHOT</saber.tool.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -167,14 +165,17 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>cloud-retail-releases</id>
+            <url>https://packages.aliyun.com/maven/repository/2037694-release-NauJ5L</url>
+        </repository>
+        <snapshotRepository>
+            <id>cloud-retail-snapshots</id>
+            <url>https://packages.aliyun.com/maven/repository/2037694-snapshot-pUciqp</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-    <!--    <build>-->
-<!--        <pluginManagement>-->
-<!--            <plugins>-->
-
-<!--            </plugins>-->
-<!--        </pluginManagement>-->
-<!--    </build>-->
 
      <!--Add Spring repositories-->
      <!--(you don't need this if you are using a .RELEASE version)-->

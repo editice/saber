@@ -61,23 +61,23 @@ public class SharePie {
     }
 
 
-    public static void main(String[] args) {
-
-        //举例，月度计划回复场景：
-        /**
-         * 1. 蒙牛西安子公司，三个销售组织咸阳、西安、曲江，初始设置回复分摊比例为：7、2、1
-         * 2. 子公司针对商品X，仅销售组织咸阳和西安有提报， 总计提报9999，实际回复8888
-         * 3. 计算针对咸阳和西安回复分摊数额
-         *
-         *
-         */
-        Map<String, BigDecimal> map = new HashMap<>();
-        map.put("咸阳", new BigDecimal("7"));
-        map.put("西安", new BigDecimal("2"));
-
-        SharePie sharePie = new SharePie(map);
-
-        System.out.println(sharePie.share(new BigDecimal("8888"), 0, RoundingMode.DOWN));
-
-    }
+//    public static void main(String[] args) {
+//
+//        //举例，月度计划回复场景：
+//        /**
+//         * 1. 蒙牛西安子公司，三个销售组织咸阳、西安、曲江，初始设置回复分摊比例为：7、2、1
+//         * 2. 子公司针对商品X，仅销售组织咸阳和西安有提报， 总计提报9999，实际回复8888
+//         * 3. 计算针对咸阳和西安回复分摊数额
+//         *
+//         *
+//         */
+//        Map<String, BigDecimal> map = new HashMap<>();
+//        map.put("咸阳", new BigDecimal("7"));
+//        map.put("西安", new BigDecimal("2"));
+//
+//        SharePie sharePie = new SharePie(map);
+//
+//        System.out.println(sharePie.share(new BigDecimal("8888"), 0, RoundingMode.DOWN));
+//
+//    }
 }

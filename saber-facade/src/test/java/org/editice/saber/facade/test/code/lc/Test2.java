@@ -1,4 +1,4 @@
-package org.editice.saber.facade.test.leetcode;
+package org.editice.saber.facade.test.code.lc;
 
 import com.google.common.collect.Lists;
 import org.junit.Test;
