@@ -1,4 +1,4 @@
-package org.editice.saber.facade.test.code.lc;
+package org.editice.saber.facade.test.code.temp;
 
 /**
  * @author tinglang
