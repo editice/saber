@@ -9,7 +9,7 @@ import java.util.*;
  * @author tinglang
  * @date 2021/12/30.
  */
-public class Test2 {
+public class T12 {
 
 //    输入：digits = "23"
 //    输出：["ad","ae","af","bd","be","bf","cd","ce","cf"]

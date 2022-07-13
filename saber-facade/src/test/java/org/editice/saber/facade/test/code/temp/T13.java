@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author tinglang
  * @date 2021/12/31.
  */
-public class Test3 {
+public class T13 {
 
     public int threeSumClosest(int[] nums, int target) {
         int len = nums.length;

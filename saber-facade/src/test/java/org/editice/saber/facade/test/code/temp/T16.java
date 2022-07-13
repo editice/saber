@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  * @author tinglang
  * @date 2022/1/13.
  */
-public class Test4 implements TestBase {
+public class T16 implements TestBase {
 
     @Test
     @Override

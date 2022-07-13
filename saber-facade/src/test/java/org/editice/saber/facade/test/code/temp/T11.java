@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
  * @author tinglang
  * @date 2021/12/29.
  */
-public class Test1 implements TestBase {
+public class T11 implements TestBase {
 
 //    字符          数值
 //    I             1
