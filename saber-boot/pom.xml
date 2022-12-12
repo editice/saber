@@ -21,10 +21,6 @@
         </dependency>
         <dependency>
             <groupId>org.editice.saber</groupId>
-            <artifactId>saber-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.editice.saber</groupId>
             <artifactId>saber-tool</artifactId>
         </dependency>
 
