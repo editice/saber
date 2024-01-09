@@ -23,6 +23,7 @@ public class IndexController {
     public String print1() throws InterruptedException {
         for(int i=0;i<100;i++){
             testLowRt(i);
+            testLowRt1(i)
         }
         return "HELLO WORLD! YES!";
     }
@@ -31,6 +32,13 @@ public class IndexController {
         for(int i=0;i<max;i++){
             Thread.sleep(10);
             logger.warn(String.format("test low rt %s", i));
+        }
+    }
+
+    public void testLowRt1(int max) throws InterruptedException {
+        for(int i=0;i<max;i++){
+            Thread.sleep(10);
+            logger.warn("test low rt "+i);
         }
     }
 
