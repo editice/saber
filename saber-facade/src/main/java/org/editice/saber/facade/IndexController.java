@@ -23,7 +23,7 @@ public class IndexController {
     public String print1() throws InterruptedException {
         for(int i=0;i<100;i++){
             testLowRt(i);
-            testLowRt1(i)
+            testLowRt1(i);
         }
         return "HELLO WORLD! YES!";
     }
