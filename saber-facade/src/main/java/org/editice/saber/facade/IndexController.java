@@ -1,11 +1,9 @@
 package org.editice.saber.facade;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
-
-import java.util.HashMap;
 
 /**
  * @author tinglang
@@ -14,9 +12,27 @@ import java.util.HashMap;
 @RestController
 public class IndexController {
 
+    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+
     @RequestMapping("/")
     public String print(){
         return "HELLO WORLD! YES!";
     }
+
+    @RequestMapping("/test")
+    public String print1() throws InterruptedException {
+        for(int i=0;i<100;i++){
+            testLowRt(i);
+        }
+        return "HELLO WORLD! YES!";
+    }
+
+    public void testLowRt(int max) throws InterruptedException {
+        for(int i=0;i<max;i++){
+            Thread.sleep(10);
+            logger.warn(String.format("test low rt %s", i));
+        }
+    }
+
 
 }
